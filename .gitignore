@@ -216,3 +216,10 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+Figures*
+jobs_output/
+*.sub
+run_batch.py
+backup/
+data/
