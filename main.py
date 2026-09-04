@@ -12,7 +12,7 @@ if __name__ == "__main__":
     # Simulation Parameters
     parser.add_argument("--U", type=int, default=8, help="Number of users")
     parser.add_argument("--K", type=int, default=10, help="Number of arms")
-    parser.add_argument("--T", type=int, default=10000, help="Total time horizon")
+    parser.add_argument("--T", type=int, default=100000, help="Total time horizon")
     parser.add_argument("--run_counts", type=int, default=30, help="Number of independent seeds/trials to run")
     parser.add_argument("--minimum_gap", type=float, default=0.25, help="Minimum gap for preference probabilities")
     

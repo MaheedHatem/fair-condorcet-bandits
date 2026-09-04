@@ -161,7 +161,6 @@ def dkwt(P: np.ndarray, s_true: np.ndarray, delta: float, rng: Generator, sushi_
             total_samples += samples
         estimated_winners[u] = remaining_arms[0]
     objectives = np.array(objectives).flatten()
-    print("DKWT finished.", flush=True)
     return estimated_winners, total_samples, wins, counts, objectives, scores_1, scores_2, sushi_utils
 
 def explore_then_commit(
@@ -225,7 +224,6 @@ def explore_then_commit(
     L_analytical = math.ceil(find_positive_real_roots([a, b, c, d])** 2) 
 
     L = L_scaling*math.ceil((K ** (-2/3) * T ** (2/3) * U ** (2/3) * (math.log(U*K*T)) ** (1/3)) / len(estimated_winners) ** (2/3))
-    print(L_analytical, L)
     if (abs(L_scaling - 1.0) < 1e-5):
         L = L_analytical
     wins = np.zeros((K, K, U,), dtype=float)
